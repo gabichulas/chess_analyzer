@@ -23,12 +23,10 @@ def parse_deck(fen):
                 expanded_row += char
         board.extend(list(expanded_row))
     
-    # Asegurarse de que board tenga exactamente 64 elementos
     if len(board) != 64:
         raise ValueError("El tablero generado no tiene 64 elementos")
 
-    # Agregar 'Color' y 'Evaluation'
-    board.append(fen.split(' ')[1])  # Color
+    board.append(fen.split(' ')[1])
     
     return board
 
